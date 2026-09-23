@@ -1,0 +1,2574 @@
+{
+  "category": "trigonometry",
+  "templates": [
+    {
+      "id": "trig_easy_01",
+      "difficulty": "easy",
+      "topic": "direct sine value",
+      "equation": "sin(x) = v",
+      "domain": {
+        "unit": "radians",
+        "min": "0",
+        "max": "2π",
+        "include_min": true,
+        "include_max": false
+      },
+      "variables": {
+        "v": {
+          "role": "free",
+          "type": "standard_sine_value",
+          "generation": "standard_sine_value"
+        }
+      },
+      "generation": {
+        "order": [
+          "v"
+        ]
+      },
+      "construction": {
+        "target": "sin(x)",
+        "guaranteed_values": [
+          "v"
+        ]
+      },
+      "constraints": [],
+      "method": "direct_sine"
+    },
+    {
+      "id": "trig_easy_02",
+      "difficulty": "easy",
+      "topic": "direct cosine value",
+      "equation": "cos(x) = v",
+      "domain": {
+        "unit": "radians",
+        "min": "0",
+        "max": "2π",
+        "include_min": true,
+        "include_max": false
+      },
+      "variables": {
+        "v": {
+          "role": "free",
+          "type": "standard_cosine_value",
+          "generation": "standard_cosine_value"
+        }
+      },
+      "generation": {
+        "order": [
+          "v"
+        ]
+      },
+      "construction": {
+        "target": "cos(x)",
+        "guaranteed_values": [
+          "v"
+        ]
+      },
+      "constraints": [],
+      "method": "direct_cosine"
+    },
+    {
+      "id": "trig_easy_03",
+      "difficulty": "easy",
+      "topic": "direct tangent value",
+      "equation": "tg(x) = v",
+      "domain": {
+        "unit": "radians",
+        "min": "0",
+        "max": "2π",
+        "include_min": true,
+        "include_max": false,
+        "excluded": [
+          "π/2",
+          "3π/2"
+        ]
+      },
+      "variables": {
+        "v": {
+          "role": "free",
+          "type": "standard_tangent_value",
+          "generation": "standard_tangent_value"
+        }
+      },
+      "generation": {
+        "order": [
+          "v"
+        ]
+      },
+      "construction": {
+        "target": "tg(x)",
+        "guaranteed_values": [
+          "v"
+        ]
+      },
+      "constraints": [],
+      "method": "direct_tangent"
+    },
+    {
+      "id": "trig_easy_04",
+      "difficulty": "easy",
+      "topic": "direct cotangent value",
+      "equation": "cotg(x) = v",
+      "domain": {
+        "unit": "radians",
+        "min": "0",
+        "max": "2π",
+        "include_min": true,
+        "include_max": false,
+        "excluded": [
+          "0",
+          "π"
+        ]
+      },
+      "variables": {
+        "v": {
+          "role": "free",
+          "type": "standard_cotangent_value",
+          "generation": "standard_cotangent_value"
+        }
+      },
+      "generation": {
+        "order": [
+          "v"
+        ]
+      },
+      "construction": {
+        "target": "cotg(x)",
+        "guaranteed_values": [
+          "v"
+        ]
+      },
+      "constraints": [
+        "v != 0"
+      ],
+      "method": "direct_cotangent"
+    },
+    {
+      "id": "trig_easy_05",
+      "difficulty": "easy",
+      "topic": "direct sine value, degrees",
+      "equation": "sin(x) = v",
+      "domain": {
+        "unit": "degrees",
+        "min": "0",
+        "max": "360",
+        "include_min": true,
+        "include_max": false
+      },
+      "variables": {
+        "v": {
+          "role": "free",
+          "type": "standard_sine_value",
+          "generation": "standard_sine_value"
+        }
+      },
+      "generation": {
+        "order": [
+          "v"
+        ]
+      },
+      "construction": {
+        "target": "sin(x)",
+        "guaranteed_values": [
+          "v"
+        ]
+      },
+      "constraints": [],
+      "method": "direct_sine"
+    },
+    {
+      "id": "trig_easy_06",
+      "difficulty": "easy",
+      "topic": "direct cosine value, degrees",
+      "equation": "cos(x) = v",
+      "domain": {
+        "unit": "degrees",
+        "min": "0",
+        "max": "360",
+        "include_min": true,
+        "include_max": false
+      },
+      "variables": {
+        "v": {
+          "role": "free",
+          "type": "standard_cosine_value",
+          "generation": "standard_cosine_value"
+        }
+      },
+      "generation": {
+        "order": [
+          "v"
+        ]
+      },
+      "construction": {
+        "target": "cos(x)",
+        "guaranteed_values": [
+          "v"
+        ]
+      },
+      "constraints": [],
+      "method": "direct_cosine"
+    },
+    {
+      "id": "trig_easy_07",
+      "difficulty": "easy",
+      "topic": "direct tangent value, degrees",
+      "equation": "tg(x) = v",
+      "domain": {
+        "unit": "degrees",
+        "min": "0",
+        "max": "360",
+        "include_min": true,
+        "include_max": false,
+        "excluded": [
+          "90",
+          "270"
+        ]
+      },
+      "variables": {
+        "v": {
+          "role": "free",
+          "type": "standard_tangent_value",
+          "generation": "standard_tangent_value"
+        }
+      },
+      "generation": {
+        "order": [
+          "v"
+        ]
+      },
+      "construction": {
+        "target": "tg(x)",
+        "guaranteed_values": [
+          "v"
+        ]
+      },
+      "constraints": [],
+      "method": "direct_tangent"
+    },
+    {
+      "id": "trig_easy_08",
+      "difficulty": "easy",
+      "topic": "explicit negative sine value",
+      "equation": "sin(x) = -v",
+      "domain": {
+        "unit": "radians",
+        "min": "0",
+        "max": "2π",
+        "include_min": true,
+        "include_max": false
+      },
+      "variables": {
+        "v": {
+          "role": "free",
+          "type": "positive_standard_sine_value",
+          "generation": "positive_standard_sine_value"
+        }
+      },
+      "generation": {
+        "order": [
+          "v"
+        ]
+      },
+      "construction": {
+        "target": "sin(x)",
+        "guaranteed_values": [
+          "-v"
+        ]
+      },
+      "constraints": [
+        "v > 0"
+      ],
+      "method": "direct_sine"
+    },
+    {
+      "id": "trig_easy_09",
+      "difficulty": "easy",
+      "topic": "explicit negative cosine value",
+      "equation": "cos(x) = -v",
+      "domain": {
+        "unit": "radians",
+        "min": "0",
+        "max": "2π",
+        "include_min": true,
+        "include_max": false
+      },
+      "variables": {
+        "v": {
+          "role": "free",
+          "type": "positive_standard_cosine_value",
+          "generation": "positive_standard_cosine_value"
+        }
+      },
+      "generation": {
+        "order": [
+          "v"
+        ]
+      },
+      "construction": {
+        "target": "cos(x)",
+        "guaranteed_values": [
+          "-v"
+        ]
+      },
+      "constraints": [
+        "v > 0"
+      ],
+      "method": "direct_cosine"
+    },
+    {
+      "id": "trig_easy_10",
+      "difficulty": "easy",
+      "topic": "explicit negative tangent value, degrees",
+      "equation": "tg(x) = -v",
+      "domain": {
+        "unit": "degrees",
+        "min": "0",
+        "max": "360",
+        "include_min": true,
+        "include_max": false,
+        "excluded": [
+          "90",
+          "270"
+        ]
+      },
+      "variables": {
+        "v": {
+          "role": "free",
+          "type": "positive_standard_tangent_value",
+          "generation": "positive_standard_tangent_value"
+        }
+      },
+      "generation": {
+        "order": [
+          "v"
+        ]
+      },
+      "construction": {
+        "target": "tg(x)",
+        "guaranteed_values": [
+          "-v"
+        ]
+      },
+      "constraints": [
+        "v > 0"
+      ],
+      "method": "direct_tangent"
+    },
+    {
+      "id": "trig_normal_01",
+      "difficulty": "normal",
+      "topic": "linear isolation, sine",
+      "equation": "a·sin(x) + b = 0",
+      "domain": {
+        "unit": "radians",
+        "min": "0",
+        "max": "2π",
+        "include_min": true,
+        "include_max": false
+      },
+      "variables": {
+        "v": {
+          "role": "free",
+          "type": "standard_sine_value",
+          "generation": "standard_sine_value"
+        },
+        "a": {
+          "role": "free",
+          "type": "nonzero_integer",
+          "generation": "nonzero_integer_in_range_-6_to_6"
+        },
+        "b": {
+          "role": "derived",
+          "formula": "-a*v"
+        }
+      },
+      "generation": {
+        "order": [
+          "v",
+          "a",
+          "b"
+        ]
+      },
+      "construction": {
+        "target": "sin(x)",
+        "reduced_form": "sin(x) = -b/a",
+        "guaranteed_values": [
+          "v"
+        ]
+      },
+      "constraints": [
+        "a != 0"
+      ],
+      "method": "linear_isolation_sin"
+    },
+    {
+      "id": "trig_normal_02",
+      "difficulty": "normal",
+      "topic": "linear isolation, cosine",
+      "equation": "a·cos(x) - b = 0",
+      "domain": {
+        "unit": "radians",
+        "min": "0",
+        "max": "2π",
+        "include_min": true,
+        "include_max": false
+      },
+      "variables": {
+        "v": {
+          "role": "free",
+          "type": "standard_cosine_value",
+          "generation": "standard_cosine_value"
+        },
+        "a": {
+          "role": "free",
+          "type": "nonzero_integer",
+          "generation": "nonzero_integer_in_range_-6_to_6"
+        },
+        "b": {
+          "role": "derived",
+          "formula": "a*v"
+        }
+      },
+      "generation": {
+        "order": [
+          "v",
+          "a",
+          "b"
+        ]
+      },
+      "construction": {
+        "target": "cos(x)",
+        "reduced_form": "cos(x) = b/a",
+        "guaranteed_values": [
+          "v"
+        ]
+      },
+      "constraints": [
+        "a != 0"
+      ],
+      "method": "linear_isolation_cos"
+    },
+    {
+      "id": "trig_normal_03",
+      "difficulty": "normal",
+      "topic": "linear isolation, tangent",
+      "equation": "a·tg(x) - b = 0",
+      "domain": {
+        "unit": "radians",
+        "min": "0",
+        "max": "2π",
+        "include_min": true,
+        "include_max": false,
+        "excluded": [
+          "π/2",
+          "3π/2"
+        ]
+      },
+      "variables": {
+        "v": {
+          "role": "free",
+          "type": "standard_tangent_value",
+          "generation": "standard_tangent_value"
+        },
+        "a": {
+          "role": "free",
+          "type": "nonzero_integer",
+          "generation": "nonzero_integer_in_range_-6_to_6"
+        },
+        "b": {
+          "role": "derived",
+          "formula": "a*v"
+        }
+      },
+      "generation": {
+        "order": [
+          "v",
+          "a",
+          "b"
+        ]
+      },
+      "construction": {
+        "target": "tg(x)",
+        "reduced_form": "tg(x) = b/a",
+        "guaranteed_values": [
+          "v"
+        ]
+      },
+      "constraints": [
+        "a != 0"
+      ],
+      "method": "linear_isolation_tan"
+    },
+    {
+      "id": "trig_normal_04",
+      "difficulty": "normal",
+      "topic": "linear isolation, cotangent",
+      "equation": "a·cotg(x) + b = 0",
+      "domain": {
+        "unit": "radians",
+        "min": "0",
+        "max": "2π",
+        "include_min": true,
+        "include_max": false,
+        "excluded": [
+          "0",
+          "π"
+        ]
+      },
+      "variables": {
+        "v": {
+          "role": "free",
+          "type": "standard_cotangent_value",
+          "generation": "standard_cotangent_value"
+        },
+        "a": {
+          "role": "free",
+          "type": "nonzero_integer",
+          "generation": "nonzero_integer_in_range_-6_to_6"
+        },
+        "b": {
+          "role": "derived",
+          "formula": "-a*v"
+        }
+      },
+      "generation": {
+        "order": [
+          "v",
+          "a",
+          "b"
+        ]
+      },
+      "construction": {
+        "target": "cotg(x)",
+        "reduced_form": "cotg(x) = -b/a",
+        "guaranteed_values": [
+          "v"
+        ]
+      },
+      "constraints": [
+        "a != 0",
+        "v != 0"
+      ],
+      "method": "linear_isolation_cot"
+    },
+    {
+      "id": "trig_normal_05",
+      "difficulty": "normal",
+      "topic": "terms on both sides, sine",
+      "equation": "p·sin(x) + q = r·sin(x) + s",
+      "domain": {
+        "unit": "radians",
+        "min": "0",
+        "max": "2π",
+        "include_min": true,
+        "include_max": false
+      },
+      "variables": {
+        "v": {
+          "role": "free",
+          "type": "standard_sine_value",
+          "generation": "standard_sine_value"
+        },
+        "p": {
+          "role": "free",
+          "type": "integer",
+          "generation": "integer_in_range_-6_to_6"
+        },
+        "r": {
+          "role": "free",
+          "type": "integer",
+          "generation": "integer_in_range_-6_to_6_different_from_p"
+        },
+        "q": {
+          "role": "free",
+          "type": "integer",
+          "generation": "integer_in_range_-6_to_6"
+        },
+        "s": {
+          "role": "derived",
+          "formula": "q + (p - r)*v"
+        }
+      },
+      "generation": {
+        "order": [
+          "v",
+          "p",
+          "r",
+          "q",
+          "s"
+        ]
+      },
+      "construction": {
+        "target": "sin(x)",
+        "reduced_form": "(p-r)*sin(x) = s-q",
+        "guaranteed_values": [
+          "v"
+        ]
+      },
+      "constraints": [
+        "p != r"
+      ],
+      "method": "collect_isolate_sin"
+    },
+    {
+      "id": "trig_normal_06",
+      "difficulty": "normal",
+      "topic": "terms on both sides, cosine",
+      "equation": "p·cos(x) + q = r·cos(x) + s",
+      "domain": {
+        "unit": "radians",
+        "min": "0",
+        "max": "2π",
+        "include_min": true,
+        "include_max": false
+      },
+      "variables": {
+        "v": {
+          "role": "free",
+          "type": "standard_cosine_value",
+          "generation": "standard_cosine_value"
+        },
+        "p": {
+          "role": "free",
+          "type": "integer",
+          "generation": "integer_in_range_-6_to_6"
+        },
+        "r": {
+          "role": "free",
+          "type": "integer",
+          "generation": "integer_in_range_-6_to_6_different_from_p"
+        },
+        "q": {
+          "role": "free",
+          "type": "integer",
+          "generation": "integer_in_range_-6_to_6"
+        },
+        "s": {
+          "role": "derived",
+          "formula": "q + (p - r)*v"
+        }
+      },
+      "generation": {
+        "order": [
+          "v",
+          "p",
+          "r",
+          "q",
+          "s"
+        ]
+      },
+      "construction": {
+        "target": "cos(x)",
+        "reduced_form": "(p-r)*cos(x) = s-q",
+        "guaranteed_values": [
+          "v"
+        ]
+      },
+      "constraints": [
+        "p != r"
+      ],
+      "method": "collect_isolate_cos"
+    },
+    {
+      "id": "trig_normal_07",
+      "difficulty": "normal",
+      "topic": "fractional form, sine",
+      "equation": "(a·sin(x) + b) / c = d",
+      "domain": {
+        "unit": "radians",
+        "min": "0",
+        "max": "2π",
+        "include_min": true,
+        "include_max": false
+      },
+      "variables": {
+        "v": {
+          "role": "free",
+          "type": "standard_sine_value",
+          "generation": "standard_sine_value"
+        },
+        "a": {
+          "role": "free",
+          "type": "nonzero_integer",
+          "generation": "nonzero_integer_in_range_-6_to_6"
+        },
+        "c": {
+          "role": "free",
+          "type": "nonzero_integer",
+          "generation": "nonzero_integer_in_range_-6_to_6"
+        },
+        "d": {
+          "role": "free",
+          "type": "integer",
+          "generation": "integer_in_range_-6_to_6"
+        },
+        "b": {
+          "role": "derived",
+          "formula": "c*d - a*v"
+        }
+      },
+      "generation": {
+        "order": [
+          "v",
+          "a",
+          "c",
+          "d",
+          "b"
+        ]
+      },
+      "construction": {
+        "target": "sin(x)",
+        "reduced_form": "a*sin(x) + b = c*d",
+        "guaranteed_values": [
+          "v"
+        ]
+      },
+      "constraints": [
+        "a != 0",
+        "c != 0"
+      ],
+      "method": "clear_fraction_sin"
+    },
+    {
+      "id": "trig_normal_08",
+      "difficulty": "normal",
+      "topic": "subtraction form, tangent",
+      "equation": "a - b·tg(x) = c",
+      "domain": {
+        "unit": "radians",
+        "min": "0",
+        "max": "2π",
+        "include_min": true,
+        "include_max": false,
+        "excluded": [
+          "π/2",
+          "3π/2"
+        ]
+      },
+      "variables": {
+        "v": {
+          "role": "free",
+          "type": "standard_tangent_value",
+          "generation": "standard_tangent_value"
+        },
+        "a": {
+          "role": "free",
+          "type": "integer",
+          "generation": "integer_in_range_-6_to_6"
+        },
+        "b": {
+          "role": "free",
+          "type": "nonzero_integer",
+          "generation": "nonzero_integer_in_range_-6_to_6"
+        },
+        "c": {
+          "role": "derived",
+          "formula": "a - b*v"
+        }
+      },
+      "generation": {
+        "order": [
+          "v",
+          "a",
+          "b",
+          "c"
+        ]
+      },
+      "construction": {
+        "target": "tg(x)",
+        "reduced_form": "b*tg(x) = a - c",
+        "guaranteed_values": [
+          "v"
+        ]
+      },
+      "constraints": [
+        "b != 0"
+      ],
+      "method": "linear_isolation_tan"
+    },
+    {
+      "id": "trig_normal_09",
+      "difficulty": "normal",
+      "topic": "rational coefficient, sine",
+      "equation": "sin(x)/a + b/c = 0",
+      "domain": {
+        "unit": "radians",
+        "min": "0",
+        "max": "2π",
+        "include_min": true,
+        "include_max": false
+      },
+      "variables": {
+        "v": {
+          "role": "free",
+          "type": "rational_in_unit_interval",
+          "generation": "rational_standard_sine_value"
+        },
+        "a": {
+          "role": "free",
+          "type": "nonzero_integer",
+          "generation": "nonzero_integer_in_range_-6_to_6"
+        },
+        "k": {
+          "role": "free",
+          "type": "nonzero_integer",
+          "generation": "nonzero_integer_in_range_-6_to_6"
+        },
+        "c": {
+          "role": "derived",
+          "formula": "a*k"
+        },
+        "b": {
+          "role": "derived",
+          "formula": "-v*k"
+        }
+      },
+      "generation": {
+        "order": [
+          "v",
+          "a",
+          "k",
+          "c",
+          "b"
+        ]
+      },
+      "construction": {
+        "target": "sin(x)",
+        "reduced_form": "sin(x) = -a*b/c",
+        "guaranteed_values": [
+          "v"
+        ]
+      },
+      "constraints": [
+        "a != 0",
+        "k != 0"
+      ],
+      "method": "clear_fraction_sin"
+    },
+    {
+      "id": "trig_normal_10",
+      "difficulty": "normal",
+      "topic": "scaled cosine value, degrees",
+      "equation": "k·cos(x) = m",
+      "domain": {
+        "unit": "degrees",
+        "min": "0",
+        "max": "360",
+        "include_min": true,
+        "include_max": false
+      },
+      "variables": {
+        "v": {
+          "role": "free",
+          "type": "standard_cosine_value",
+          "generation": "standard_cosine_value"
+        },
+        "k": {
+          "role": "free",
+          "type": "nonzero_integer",
+          "generation": "nonzero_integer_in_range_4_to_9"
+        },
+        "m": {
+          "role": "derived",
+          "formula": "k*v"
+        }
+      },
+      "generation": {
+        "order": [
+          "v",
+          "k",
+          "m"
+        ]
+      },
+      "construction": {
+        "target": "cos(x)",
+        "reduced_form": "cos(x) = m/k",
+        "guaranteed_values": [
+          "v"
+        ]
+      },
+      "constraints": [
+        "k != 0"
+      ],
+      "method": "linear_isolation_cos"
+    },
+    {
+      "id": "trig_advanced_01",
+      "difficulty": "advanced",
+      "topic": "multiple angle, sine",
+      "equation": "sin(n·x) = v",
+      "domain": {
+        "unit": "radians",
+        "min": "0",
+        "max": "2π",
+        "include_min": true,
+        "include_max": false
+      },
+      "variables": {
+        "v": {
+          "role": "free",
+          "type": "standard_sine_value",
+          "generation": "standard_sine_value"
+        },
+        "n": {
+          "role": "free",
+          "type": "positive_integer",
+          "generation": "positive_integer_in_range_2_to_4"
+        }
+      },
+      "generation": {
+        "order": [
+          "v",
+          "n"
+        ]
+      },
+      "construction": {
+        "target": "sin(n*x)",
+        "guaranteed_values": [
+          "v"
+        ]
+      },
+      "constraints": [],
+      "method": "multiple_angle_sin"
+    },
+    {
+      "id": "trig_advanced_02",
+      "difficulty": "advanced",
+      "topic": "multiple angle, cosine",
+      "equation": "cos(n·x) = v",
+      "domain": {
+        "unit": "radians",
+        "min": "0",
+        "max": "2π",
+        "include_min": true,
+        "include_max": false
+      },
+      "variables": {
+        "v": {
+          "role": "free",
+          "type": "standard_cosine_value",
+          "generation": "standard_cosine_value"
+        },
+        "n": {
+          "role": "free",
+          "type": "positive_integer",
+          "generation": "positive_integer_in_range_2_to_4"
+        }
+      },
+      "generation": {
+        "order": [
+          "v",
+          "n"
+        ]
+      },
+      "construction": {
+        "target": "cos(n*x)",
+        "guaranteed_values": [
+          "v"
+        ]
+      },
+      "constraints": [],
+      "method": "multiple_angle_cos"
+    },
+    {
+      "id": "trig_advanced_03",
+      "difficulty": "advanced",
+      "topic": "multiple angle, tangent",
+      "equation": "tg(n·x) = v",
+      "domain": {
+        "unit": "radians",
+        "min": "0",
+        "max": "2π",
+        "include_min": true,
+        "include_max": false,
+        "excluded_pattern": "n·x ≠ π/2 + kπ"
+      },
+      "variables": {
+        "v": {
+          "role": "free",
+          "type": "standard_tangent_value",
+          "generation": "standard_tangent_value"
+        },
+        "n": {
+          "role": "free",
+          "type": "positive_integer",
+          "generation": "positive_integer_in_range_2_to_3"
+        }
+      },
+      "generation": {
+        "order": [
+          "v",
+          "n"
+        ]
+      },
+      "construction": {
+        "target": "tg(n*x)",
+        "guaranteed_values": [
+          "v"
+        ]
+      },
+      "constraints": [],
+      "method": "multiple_angle_tan"
+    },
+    {
+      "id": "trig_advanced_04",
+      "difficulty": "advanced",
+      "topic": "phase-shifted sine",
+      "equation": "sin(x + φ) = v",
+      "domain": {
+        "unit": "radians",
+        "min": "0",
+        "max": "2π",
+        "include_min": true,
+        "include_max": false
+      },
+      "variables": {
+        "v": {
+          "role": "free",
+          "type": "standard_sine_value",
+          "generation": "standard_sine_value"
+        },
+        "phi": {
+          "role": "free",
+          "type": "standard_angle",
+          "generation": "standard_angle_in_radians"
+        }
+      },
+      "generation": {
+        "order": [
+          "v",
+          "phi"
+        ]
+      },
+      "construction": {
+        "target": "sin(x + phi)",
+        "guaranteed_values": [
+          "v"
+        ]
+      },
+      "constraints": [],
+      "method": "phase_shift_sin"
+    },
+    {
+      "id": "trig_advanced_05",
+      "difficulty": "advanced",
+      "topic": "phase-shifted cosine",
+      "equation": "cos(x - φ) = v",
+      "domain": {
+        "unit": "radians",
+        "min": "0",
+        "max": "2π",
+        "include_min": true,
+        "include_max": false
+      },
+      "variables": {
+        "v": {
+          "role": "free",
+          "type": "standard_cosine_value",
+          "generation": "standard_cosine_value"
+        },
+        "phi": {
+          "role": "free",
+          "type": "standard_angle",
+          "generation": "standard_angle_in_radians"
+        }
+      },
+      "generation": {
+        "order": [
+          "v",
+          "phi"
+        ]
+      },
+      "construction": {
+        "target": "cos(x - phi)",
+        "guaranteed_values": [
+          "v"
+        ]
+      },
+      "constraints": [],
+      "method": "phase_shift_cos"
+    },
+    {
+      "id": "trig_advanced_06",
+      "difficulty": "advanced",
+      "topic": "isolation + multiple angle, sine",
+      "equation": "a·sin(n·x) + b = 0",
+      "domain": {
+        "unit": "radians",
+        "min": "0",
+        "max": "2π",
+        "include_min": true,
+        "include_max": false
+      },
+      "variables": {
+        "v": {
+          "role": "free",
+          "type": "standard_sine_value",
+          "generation": "standard_sine_value"
+        },
+        "n": {
+          "role": "free",
+          "type": "positive_integer",
+          "generation": "positive_integer_in_range_2_to_3"
+        },
+        "a": {
+          "role": "free",
+          "type": "nonzero_integer",
+          "generation": "nonzero_integer_in_range_-6_to_6"
+        },
+        "b": {
+          "role": "derived",
+          "formula": "-a*v"
+        }
+      },
+      "generation": {
+        "order": [
+          "v",
+          "n",
+          "a",
+          "b"
+        ]
+      },
+      "construction": {
+        "target": "sin(n*x)",
+        "reduced_form": "sin(n*x) = -b/a",
+        "guaranteed_values": [
+          "v"
+        ]
+      },
+      "constraints": [
+        "a != 0"
+      ],
+      "method": "isolation_multiple_angle_sin"
+    },
+    {
+      "id": "trig_advanced_07",
+      "difficulty": "advanced",
+      "topic": "isolation + multiple angle, cosine",
+      "equation": "a·cos(n·x) + b = c",
+      "domain": {
+        "unit": "radians",
+        "min": "0",
+        "max": "2π",
+        "include_min": true,
+        "include_max": false
+      },
+      "variables": {
+        "v": {
+          "role": "free",
+          "type": "standard_cosine_value",
+          "generation": "standard_cosine_value"
+        },
+        "n": {
+          "role": "free",
+          "type": "positive_integer",
+          "generation": "positive_integer_in_range_2_to_3"
+        },
+        "a": {
+          "role": "free",
+          "type": "nonzero_integer",
+          "generation": "nonzero_integer_in_range_-6_to_6"
+        },
+        "b": {
+          "role": "free",
+          "type": "integer",
+          "generation": "integer_in_range_-6_to_6"
+        },
+        "c": {
+          "role": "derived",
+          "formula": "a*v + b"
+        }
+      },
+      "generation": {
+        "order": [
+          "v",
+          "n",
+          "a",
+          "b",
+          "c"
+        ]
+      },
+      "construction": {
+        "target": "cos(n*x)",
+        "reduced_form": "cos(n*x) = (c-b)/a",
+        "guaranteed_values": [
+          "v"
+        ]
+      },
+      "constraints": [
+        "a != 0"
+      ],
+      "method": "isolation_multiple_angle_cos"
+    },
+    {
+      "id": "trig_advanced_08",
+      "difficulty": "advanced",
+      "topic": "squared sine, sign split",
+      "equation": "sin²(x) = v",
+      "domain": {
+        "unit": "radians",
+        "min": "0",
+        "max": "2π",
+        "include_min": true,
+        "include_max": false
+      },
+      "variables": {
+        "w": {
+          "role": "free",
+          "type": "standard_sine_magnitude",
+          "generation": "standard_sine_magnitude"
+        },
+        "v": {
+          "role": "derived",
+          "formula": "w*w"
+        }
+      },
+      "generation": {
+        "order": [
+          "w",
+          "v"
+        ]
+      },
+      "construction": {
+        "target": "sin(x)",
+        "reduced_form": "sin(x) = ±w",
+        "guaranteed_values": [
+          "w",
+          "-w"
+        ]
+      },
+      "constraints": [],
+      "method": "squared_trig_sin"
+    },
+    {
+      "id": "trig_advanced_09",
+      "difficulty": "advanced",
+      "topic": "squared cosine, sign split",
+      "equation": "cos²(x) = v",
+      "domain": {
+        "unit": "radians",
+        "min": "0",
+        "max": "2π",
+        "include_min": true,
+        "include_max": false
+      },
+      "variables": {
+        "w": {
+          "role": "free",
+          "type": "standard_cosine_magnitude",
+          "generation": "standard_cosine_magnitude"
+        },
+        "v": {
+          "role": "derived",
+          "formula": "w*w"
+        }
+      },
+      "generation": {
+        "order": [
+          "w",
+          "v"
+        ]
+      },
+      "construction": {
+        "target": "cos(x)",
+        "reduced_form": "cos(x) = ±w",
+        "guaranteed_values": [
+          "w",
+          "-w"
+        ]
+      },
+      "constraints": [],
+      "method": "squared_trig_cos"
+    },
+    {
+      "id": "trig_advanced_10",
+      "difficulty": "advanced",
+      "topic": "multiple angle + phase shift, tangent",
+      "equation": "tg(n·x + φ) = v",
+      "domain": {
+        "unit": "radians",
+        "min": "0",
+        "max": "2π",
+        "include_min": true,
+        "include_max": false,
+        "excluded_pattern": "n·x + φ ≠ π/2 + kπ"
+      },
+      "variables": {
+        "v": {
+          "role": "free",
+          "type": "standard_tangent_value",
+          "generation": "standard_tangent_value"
+        },
+        "n": {
+          "role": "free",
+          "type": "positive_integer",
+          "generation": "positive_integer_in_range_2_to_3"
+        },
+        "phi": {
+          "role": "free",
+          "type": "standard_angle",
+          "generation": "standard_angle_in_radians"
+        }
+      },
+      "generation": {
+        "order": [
+          "v",
+          "n",
+          "phi"
+        ]
+      },
+      "construction": {
+        "target": "tg(n*x + phi)",
+        "guaranteed_values": [
+          "v"
+        ]
+      },
+      "constraints": [],
+      "method": "multiple_angle_phase_tan"
+    },
+    {
+      "id": "trig_hard_01",
+      "difficulty": "hard",
+      "topic": "quadratic in sine",
+      "equation": "a·sin²(x) + b·sin(x) + c = 0",
+      "domain": {
+        "unit": "radians",
+        "min": "0",
+        "max": "2π",
+        "include_min": true,
+        "include_max": false
+      },
+      "variables": {
+        "r1": {
+          "role": "free",
+          "type": "standard_sine_value",
+          "generation": "standard_sine_value"
+        },
+        "r2": {
+          "role": "free",
+          "type": "standard_sine_value",
+          "generation": "standard_sine_value"
+        },
+        "k": {
+          "role": "free",
+          "type": "nonzero_integer",
+          "generation": "nonzero_integer_in_range_-6_to_6"
+        },
+        "a": {
+          "role": "derived",
+          "formula": "k"
+        },
+        "b": {
+          "role": "derived",
+          "formula": "-k*(r1+r2)"
+        },
+        "c": {
+          "role": "derived",
+          "formula": "k*r1*r2"
+        }
+      },
+      "generation": {
+        "order": [
+          "r1",
+          "r2",
+          "k",
+          "a",
+          "b",
+          "c"
+        ]
+      },
+      "construction": {
+        "target": "sin(x)",
+        "identity": "k*(sin(x)-r1)*(sin(x)-r2)",
+        "guaranteed_roots": [
+          "r1",
+          "r2"
+        ]
+      },
+      "constraints": [
+        "k != 0"
+      ],
+      "method": "quadratic_substitution_sin"
+    },
+    {
+      "id": "trig_hard_02",
+      "difficulty": "hard",
+      "topic": "quadratic in cosine",
+      "equation": "a·cos²(x) + b·cos(x) + c = 0",
+      "domain": {
+        "unit": "radians",
+        "min": "0",
+        "max": "2π",
+        "include_min": true,
+        "include_max": false
+      },
+      "variables": {
+        "r1": {
+          "role": "free",
+          "type": "standard_cosine_value",
+          "generation": "standard_cosine_value"
+        },
+        "r2": {
+          "role": "free",
+          "type": "standard_cosine_value",
+          "generation": "standard_cosine_value"
+        },
+        "k": {
+          "role": "free",
+          "type": "nonzero_integer",
+          "generation": "nonzero_integer_in_range_-6_to_6"
+        },
+        "a": {
+          "role": "derived",
+          "formula": "k"
+        },
+        "b": {
+          "role": "derived",
+          "formula": "-k*(r1+r2)"
+        },
+        "c": {
+          "role": "derived",
+          "formula": "k*r1*r2"
+        }
+      },
+      "generation": {
+        "order": [
+          "r1",
+          "r2",
+          "k",
+          "a",
+          "b",
+          "c"
+        ]
+      },
+      "construction": {
+        "target": "cos(x)",
+        "identity": "k*(cos(x)-r1)*(cos(x)-r2)",
+        "guaranteed_roots": [
+          "r1",
+          "r2"
+        ]
+      },
+      "constraints": [
+        "k != 0"
+      ],
+      "method": "quadratic_substitution_cos"
+    },
+    {
+      "id": "trig_hard_03",
+      "difficulty": "hard",
+      "topic": "quadratic in tangent",
+      "equation": "a·tg²(x) + b·tg(x) + c = 0",
+      "domain": {
+        "unit": "radians",
+        "min": "0",
+        "max": "2π",
+        "include_min": true,
+        "include_max": false,
+        "excluded": [
+          "π/2",
+          "3π/2"
+        ]
+      },
+      "variables": {
+        "r1": {
+          "role": "free",
+          "type": "standard_tangent_value",
+          "generation": "standard_tangent_value"
+        },
+        "r2": {
+          "role": "free",
+          "type": "standard_tangent_value",
+          "generation": "standard_tangent_value"
+        },
+        "k": {
+          "role": "free",
+          "type": "nonzero_integer",
+          "generation": "nonzero_integer_in_range_-6_to_6"
+        },
+        "a": {
+          "role": "derived",
+          "formula": "k"
+        },
+        "b": {
+          "role": "derived",
+          "formula": "-k*(r1+r2)"
+        },
+        "c": {
+          "role": "derived",
+          "formula": "k*r1*r2"
+        }
+      },
+      "generation": {
+        "order": [
+          "r1",
+          "r2",
+          "k",
+          "a",
+          "b",
+          "c"
+        ]
+      },
+      "construction": {
+        "target": "tg(x)",
+        "identity": "k*(tg(x)-r1)*(tg(x)-r2)",
+        "guaranteed_roots": [
+          "r1",
+          "r2"
+        ]
+      },
+      "constraints": [
+        "k != 0"
+      ],
+      "method": "quadratic_substitution_tan"
+    },
+    {
+      "id": "trig_hard_04",
+      "difficulty": "hard",
+      "topic": "quadratic in cotangent",
+      "equation": "a·cotg²(x) + b·cotg(x) + c = 0",
+      "domain": {
+        "unit": "radians",
+        "min": "0",
+        "max": "2π",
+        "include_min": true,
+        "include_max": false,
+        "excluded": [
+          "0",
+          "π"
+        ]
+      },
+      "variables": {
+        "r1": {
+          "role": "free",
+          "type": "standard_cotangent_value",
+          "generation": "nonzero_standard_cotangent_value"
+        },
+        "r2": {
+          "role": "free",
+          "type": "standard_cotangent_value",
+          "generation": "nonzero_standard_cotangent_value"
+        },
+        "k": {
+          "role": "free",
+          "type": "nonzero_integer",
+          "generation": "nonzero_integer_in_range_-6_to_6"
+        },
+        "a": {
+          "role": "derived",
+          "formula": "k"
+        },
+        "b": {
+          "role": "derived",
+          "formula": "-k*(r1+r2)"
+        },
+        "c": {
+          "role": "derived",
+          "formula": "k*r1*r2"
+        }
+      },
+      "generation": {
+        "order": [
+          "r1",
+          "r2",
+          "k",
+          "a",
+          "b",
+          "c"
+        ]
+      },
+      "construction": {
+        "target": "cotg(x)",
+        "identity": "k*(cotg(x)-r1)*(cotg(x)-r2)",
+        "guaranteed_roots": [
+          "r1",
+          "r2"
+        ]
+      },
+      "constraints": [
+        "k != 0",
+        "r1 != 0",
+        "r2 != 0"
+      ],
+      "method": "quadratic_substitution_cot"
+    },
+    {
+      "id": "trig_hard_05",
+      "difficulty": "hard",
+      "topic": "quadratic in sine of a multiple angle",
+      "equation": "a·sin²(n·x) + b·sin(n·x) + c = 0",
+      "domain": {
+        "unit": "radians",
+        "min": "0",
+        "max": "2π",
+        "include_min": true,
+        "include_max": false
+      },
+      "variables": {
+        "r1": {
+          "role": "free",
+          "type": "standard_sine_value",
+          "generation": "standard_sine_value"
+        },
+        "r2": {
+          "role": "free",
+          "type": "standard_sine_value",
+          "generation": "standard_sine_value"
+        },
+        "n": {
+          "role": "free",
+          "type": "positive_integer",
+          "generation": "positive_integer_in_range_2_to_3"
+        },
+        "k": {
+          "role": "free",
+          "type": "nonzero_integer",
+          "generation": "nonzero_integer_in_range_-6_to_6"
+        },
+        "a": {
+          "role": "derived",
+          "formula": "k"
+        },
+        "b": {
+          "role": "derived",
+          "formula": "-k*(r1+r2)"
+        },
+        "c": {
+          "role": "derived",
+          "formula": "k*r1*r2"
+        }
+      },
+      "generation": {
+        "order": [
+          "r1",
+          "r2",
+          "n",
+          "k",
+          "a",
+          "b",
+          "c"
+        ]
+      },
+      "construction": {
+        "target": "sin(n*x)",
+        "identity": "k*(sin(n*x)-r1)*(sin(n*x)-r2)",
+        "guaranteed_roots": [
+          "r1",
+          "r2"
+        ]
+      },
+      "constraints": [
+        "k != 0"
+      ],
+      "method": "quadratic_substitution_multiple_angle_sin"
+    },
+    {
+      "id": "trig_hard_06",
+      "difficulty": "hard",
+      "topic": "rational equation in sine",
+      "equation": "(a·sin(x) + b) / (c·sin(x) + d) = e",
+      "domain": {
+        "unit": "radians",
+        "min": "0",
+        "max": "2π",
+        "include_min": true,
+        "include_max": false,
+        "excluded_pattern": "sin(x) ≠ -d/c"
+      },
+      "variables": {
+        "v": {
+          "role": "free",
+          "type": "standard_sine_value",
+          "generation": "standard_sine_value"
+        },
+        "c": {
+          "role": "free",
+          "type": "nonzero_integer",
+          "generation": "nonzero_integer_in_range_-6_to_6"
+        },
+        "d": {
+          "role": "free",
+          "type": "integer",
+          "generation": "integer_in_range_-6_to_6_avoiding_minus_c_times_v"
+        },
+        "e": {
+          "role": "free",
+          "type": "integer",
+          "generation": "integer_in_range_-6_to_6"
+        },
+        "k": {
+          "role": "free",
+          "type": "nonzero_integer",
+          "generation": "nonzero_integer_in_range_-6_to_6"
+        },
+        "a": {
+          "role": "derived",
+          "formula": "e*c + k"
+        },
+        "b": {
+          "role": "derived",
+          "formula": "e*d - k*v"
+        }
+      },
+      "generation": {
+        "order": [
+          "v",
+          "c",
+          "d",
+          "e",
+          "k",
+          "a",
+          "b"
+        ]
+      },
+      "construction": {
+        "target": "sin(x)",
+        "reduced_form": "k*(sin(x) - v) = 0",
+        "guaranteed_roots": [
+          "v"
+        ]
+      },
+      "constraints": [
+        "c != 0",
+        "k != 0",
+        "c*v + d != 0"
+      ],
+      "method": "rational_equation_sin"
+    },
+    {
+      "id": "trig_hard_07",
+      "difficulty": "hard",
+      "topic": "product to double angle",
+      "equation": "a·sin(x)·cos(x) = b",
+      "domain": {
+        "unit": "radians",
+        "min": "0",
+        "max": "2π",
+        "include_min": true,
+        "include_max": false
+      },
+      "variables": {
+        "w": {
+          "role": "free",
+          "type": "standard_sine_value",
+          "generation": "standard_sine_value"
+        },
+        "k": {
+          "role": "free",
+          "type": "nonzero_integer",
+          "generation": "nonzero_integer_in_range_-6_to_6"
+        },
+        "a": {
+          "role": "derived",
+          "formula": "2*k"
+        },
+        "b": {
+          "role": "derived",
+          "formula": "k*w"
+        }
+      },
+      "generation": {
+        "order": [
+          "w",
+          "k",
+          "a",
+          "b"
+        ]
+      },
+      "construction": {
+        "target": "sin(2*x)",
+        "identity": "a*sin(x)*cos(x) = (a/2)*sin(2*x)",
+        "guaranteed_values": [
+          "w"
+        ]
+      },
+      "constraints": [
+        "a != 0"
+      ],
+      "method": "double_angle_product_sin_cos"
+    },
+    {
+      "id": "trig_hard_08",
+      "difficulty": "hard",
+      "topic": "Pythagorean substitution, one identity",
+      "equation": "a·sin²(x) - b·cos²(x) = c",
+      "domain": {
+        "unit": "radians",
+        "min": "0",
+        "max": "2π",
+        "include_min": true,
+        "include_max": false
+      },
+      "variables": {
+        "v": {
+          "role": "free",
+          "type": "standard_sine_squared_value",
+          "generation": "standard_sine_squared_value"
+        },
+        "a": {
+          "role": "free",
+          "type": "integer",
+          "generation": "integer_in_range_-6_to_6"
+        },
+        "b": {
+          "role": "free",
+          "type": "integer",
+          "generation": "integer_in_range_-6_to_6_such_that_a_plus_b_nonzero"
+        },
+        "c": {
+          "role": "derived",
+          "formula": "v*(a + b) - b"
+        }
+      },
+      "generation": {
+        "order": [
+          "v",
+          "a",
+          "b",
+          "c"
+        ]
+      },
+      "construction": {
+        "target": "sin^2(x)",
+        "reduced_form": "(a+b)*sin^2(x) - b = c",
+        "guaranteed_values": [
+          "v"
+        ]
+      },
+      "constraints": [
+        "a + b != 0"
+      ],
+      "method": "pythagorean_to_sin"
+    },
+    {
+      "id": "trig_hard_09",
+      "difficulty": "hard",
+      "topic": "reciprocal sine equation",
+      "equation": "a / sin(x) + b = c",
+      "domain": {
+        "unit": "radians",
+        "min": "0",
+        "max": "2π",
+        "include_min": true,
+        "include_max": false,
+        "excluded": [
+          "0",
+          "π"
+        ]
+      },
+      "variables": {
+        "v": {
+          "role": "free",
+          "type": "standard_sine_value",
+          "generation": "nonzero_standard_sine_value"
+        },
+        "a": {
+          "role": "free",
+          "type": "nonzero_integer",
+          "generation": "nonzero_integer_in_range_-6_to_6"
+        },
+        "b": {
+          "role": "free",
+          "type": "integer",
+          "generation": "integer_in_range_-6_to_6"
+        },
+        "c": {
+          "role": "derived",
+          "formula": "b + a/v"
+        }
+      },
+      "generation": {
+        "order": [
+          "v",
+          "a",
+          "b",
+          "c"
+        ]
+      },
+      "construction": {
+        "target": "sin(x)",
+        "reduced_form": "sin(x) = a/(c-b)",
+        "guaranteed_values": [
+          "v"
+        ]
+      },
+      "constraints": [
+        "v != 0"
+      ],
+      "method": "reciprocal_sin"
+    },
+    {
+      "id": "trig_hard_10",
+      "difficulty": "hard",
+      "topic": "tangent and cotangent combined",
+      "equation": "a·tg(x) + b·cotg(x) = c",
+      "domain": {
+        "unit": "radians",
+        "min": "0",
+        "max": "2π",
+        "include_min": true,
+        "include_max": false,
+        "excluded": [
+          "0",
+          "π/2",
+          "π",
+          "3π/2"
+        ]
+      },
+      "variables": {
+        "r1": {
+          "role": "free",
+          "type": "standard_tangent_value",
+          "generation": "nonzero_standard_tangent_value"
+        },
+        "r2": {
+          "role": "free",
+          "type": "standard_tangent_value",
+          "generation": "nonzero_standard_tangent_value"
+        },
+        "k": {
+          "role": "free",
+          "type": "nonzero_integer",
+          "generation": "nonzero_integer_in_range_-6_to_6"
+        },
+        "a": {
+          "role": "derived",
+          "formula": "k"
+        },
+        "c": {
+          "role": "derived",
+          "formula": "k*(r1+r2)"
+        },
+        "b": {
+          "role": "derived",
+          "formula": "k*r1*r2"
+        }
+      },
+      "generation": {
+        "order": [
+          "r1",
+          "r2",
+          "k",
+          "a",
+          "c",
+          "b"
+        ]
+      },
+      "construction": {
+        "target": "tg(x)",
+        "identity": "k*(tg(x)-r1)*(tg(x)-r2)",
+        "guaranteed_roots": [
+          "r1",
+          "r2"
+        ]
+      },
+      "constraints": [
+        "k != 0",
+        "r1 != 0",
+        "r2 != 0"
+      ],
+      "method": "tan_cot_reciprocal_quadratic"
+    },
+    {
+      "id": "trig_genius_01",
+      "difficulty": "genius",
+      "topic": "Pythagorean substitution into quadratic",
+      "equation": "a·sin²(x) + b·cos²(x) + c·sin(x) = d",
+      "domain": {
+        "unit": "radians",
+        "min": "0",
+        "max": "2π",
+        "include_min": true,
+        "include_max": false
+      },
+      "variables": {
+        "r1": {
+          "role": "free",
+          "type": "standard_sine_value",
+          "generation": "standard_sine_value"
+        },
+        "r2": {
+          "role": "free",
+          "type": "standard_sine_value",
+          "generation": "standard_sine_value"
+        },
+        "k": {
+          "role": "free",
+          "type": "nonzero_integer",
+          "generation": "nonzero_integer_in_range_-6_to_6"
+        },
+        "bcoef": {
+          "role": "free",
+          "type": "integer",
+          "generation": "integer_in_range_-6_to_6"
+        },
+        "a": {
+          "role": "derived",
+          "formula": "k + bcoef"
+        },
+        "c": {
+          "role": "derived",
+          "formula": "-k*(r1+r2)"
+        },
+        "d": {
+          "role": "derived",
+          "formula": "bcoef - k*r1*r2"
+        }
+      },
+      "generation": {
+        "order": [
+          "r1",
+          "r2",
+          "k",
+          "bcoef",
+          "a",
+          "c",
+          "d"
+        ]
+      },
+      "construction": {
+        "target": "sin(x)",
+        "identity": "k*(sin(x)-r1)*(sin(x)-r2)",
+        "guaranteed_roots": [
+          "r1",
+          "r2"
+        ]
+      },
+      "constraints": [
+        "k != 0"
+      ],
+      "method": "pythagorean_quadratic_sin"
+    },
+    {
+      "id": "trig_genius_02",
+      "difficulty": "genius",
+      "topic": "Pythagorean substitution, pure square",
+      "equation": "a·cos²(x) - b·sin²(x) + c = 0",
+      "domain": {
+        "unit": "radians",
+        "min": "0",
+        "max": "2π",
+        "include_min": true,
+        "include_max": false
+      },
+      "variables": {
+        "v": {
+          "role": "free",
+          "type": "standard_cosine_squared_value",
+          "generation": "standard_cosine_squared_value"
+        },
+        "a": {
+          "role": "free",
+          "type": "integer",
+          "generation": "integer_in_range_-6_to_6"
+        },
+        "b": {
+          "role": "free",
+          "type": "integer",
+          "generation": "integer_in_range_-6_to_6_such_that_a_plus_b_nonzero"
+        },
+        "c": {
+          "role": "derived",
+          "formula": "b - v*(a + b)"
+        }
+      },
+      "generation": {
+        "order": [
+          "v",
+          "a",
+          "b",
+          "c"
+        ]
+      },
+      "construction": {
+        "target": "cos^2(x)",
+        "reduced_form": "(a+b)*cos^2(x) - b + c = 0",
+        "guaranteed_values": [
+          "v"
+        ]
+      },
+      "constraints": [
+        "a + b != 0"
+      ],
+      "method": "pythagorean_to_cos"
+    },
+    {
+      "id": "trig_genius_03",
+      "difficulty": "genius",
+      "topic": "double-angle factoring",
+      "equation": "a·sin(2x) + b·cos(x) = 0",
+      "domain": {
+        "unit": "radians",
+        "min": "0",
+        "max": "2π",
+        "include_min": true,
+        "include_max": false
+      },
+      "variables": {
+        "v": {
+          "role": "free",
+          "type": "standard_sine_value",
+          "generation": "standard_sine_value"
+        },
+        "a": {
+          "role": "free",
+          "type": "nonzero_integer",
+          "generation": "nonzero_integer_in_range_-6_to_6"
+        },
+        "b": {
+          "role": "derived",
+          "formula": "-2*a*v"
+        }
+      },
+      "generation": {
+        "order": [
+          "v",
+          "a",
+          "b"
+        ]
+      },
+      "construction": {
+        "target": "cos(x) and sin(x)",
+        "identity": "2*a*cos(x)*(sin(x) - v)",
+        "guaranteed_branches": [
+          "cos(x) = 0",
+          "sin(x) = v"
+        ]
+      },
+      "constraints": [
+        "a != 0"
+      ],
+      "method": "double_angle_factoring"
+    },
+    {
+      "id": "trig_genius_04",
+      "difficulty": "genius",
+      "topic": "double-angle into quadratic, sine",
+      "equation": "a·cos(2x) + b·sin(x) + c = 0",
+      "domain": {
+        "unit": "radians",
+        "min": "0",
+        "max": "2π",
+        "include_min": true,
+        "include_max": false
+      },
+      "variables": {
+        "r1": {
+          "role": "free",
+          "type": "standard_sine_value",
+          "generation": "standard_sine_value"
+        },
+        "r2": {
+          "role": "free",
+          "type": "standard_sine_value",
+          "generation": "standard_sine_value"
+        },
+        "a": {
+          "role": "free",
+          "type": "nonzero_integer",
+          "generation": "nonzero_integer_in_range_-6_to_6"
+        },
+        "b": {
+          "role": "derived",
+          "formula": "2*a*(r1+r2)"
+        },
+        "c": {
+          "role": "derived",
+          "formula": "-a*(2*r1*r2 + 1)"
+        }
+      },
+      "generation": {
+        "order": [
+          "r1",
+          "r2",
+          "a",
+          "b",
+          "c"
+        ]
+      },
+      "construction": {
+        "target": "sin(x)",
+        "identity": "-2*a*(sin(x)-r1)*(sin(x)-r2)",
+        "guaranteed_roots": [
+          "r1",
+          "r2"
+        ]
+      },
+      "constraints": [
+        "a != 0"
+      ],
+      "method": "double_angle_quadratic_sin"
+    },
+    {
+      "id": "trig_genius_05",
+      "difficulty": "genius",
+      "topic": "double-angle into quadratic, cosine",
+      "equation": "a·cos(2x) - b·cos(x) = c",
+      "domain": {
+        "unit": "radians",
+        "min": "0",
+        "max": "2π",
+        "include_min": true,
+        "include_max": false
+      },
+      "variables": {
+        "r1": {
+          "role": "free",
+          "type": "standard_cosine_value",
+          "generation": "standard_cosine_value"
+        },
+        "r2": {
+          "role": "free",
+          "type": "standard_cosine_value",
+          "generation": "standard_cosine_value"
+        },
+        "a": {
+          "role": "free",
+          "type": "nonzero_integer",
+          "generation": "nonzero_integer_in_range_-6_to_6"
+        },
+        "b": {
+          "role": "derived",
+          "formula": "2*a*(r1+r2)"
+        },
+        "c": {
+          "role": "derived",
+          "formula": "-a*(1 + 2*r1*r2)"
+        }
+      },
+      "generation": {
+        "order": [
+          "r1",
+          "r2",
+          "a",
+          "b",
+          "c"
+        ]
+      },
+      "construction": {
+        "target": "cos(x)",
+        "identity": "2*a*(cos(x)-r1)*(cos(x)-r2)",
+        "guaranteed_roots": [
+          "r1",
+          "r2"
+        ]
+      },
+      "constraints": [
+        "a != 0"
+      ],
+      "method": "double_angle_quadratic_cos"
+    },
+    {
+      "id": "trig_genius_06",
+      "difficulty": "genius",
+      "topic": "biquadratic in sine",
+      "equation": "a·sin⁴(x) + b·sin²(x) + c = 0",
+      "domain": {
+        "unit": "radians",
+        "min": "0",
+        "max": "2π",
+        "include_min": true,
+        "include_max": false
+      },
+      "variables": {
+        "u1": {
+          "role": "free",
+          "type": "standard_sine_squared_value",
+          "generation": "standard_sine_squared_value"
+        },
+        "u2": {
+          "role": "free",
+          "type": "standard_sine_squared_value",
+          "generation": "standard_sine_squared_value"
+        },
+        "k": {
+          "role": "free",
+          "type": "nonzero_integer",
+          "generation": "nonzero_integer_in_range_-6_to_6"
+        },
+        "a": {
+          "role": "derived",
+          "formula": "k"
+        },
+        "b": {
+          "role": "derived",
+          "formula": "-k*(u1+u2)"
+        },
+        "c": {
+          "role": "derived",
+          "formula": "k*u1*u2"
+        }
+      },
+      "generation": {
+        "order": [
+          "u1",
+          "u2",
+          "k",
+          "a",
+          "b",
+          "c"
+        ]
+      },
+      "construction": {
+        "target": "sin^2(x)",
+        "identity": "k*(sin^2(x)-u1)*(sin^2(x)-u2)",
+        "guaranteed_roots": [
+          "u1",
+          "u2"
+        ]
+      },
+      "constraints": [
+        "k != 0"
+      ],
+      "method": "biquadratic_sin"
+    },
+    {
+      "id": "trig_genius_07",
+      "difficulty": "genius",
+      "topic": "Pythagorean identity with tangent and secant",
+      "equation": "a·tg²(x) + b = c·sec²(x)",
+      "domain": {
+        "unit": "radians",
+        "min": "0",
+        "max": "2π",
+        "include_min": true,
+        "include_max": false,
+        "excluded": [
+          "π/2",
+          "3π/2"
+        ]
+      },
+      "variables": {
+        "v": {
+          "role": "free",
+          "type": "standard_tangent_squared_value",
+          "generation": "standard_tangent_squared_value"
+        },
+        "a": {
+          "role": "free",
+          "type": "integer",
+          "generation": "integer_in_range_-6_to_6"
+        },
+        "c": {
+          "role": "free",
+          "type": "integer",
+          "generation": "integer_in_range_-6_to_6_different_from_a"
+        },
+        "b": {
+          "role": "derived",
+          "formula": "c - v*(a - c)"
+        }
+      },
+      "generation": {
+        "order": [
+          "v",
+          "a",
+          "c",
+          "b"
+        ]
+      },
+      "construction": {
+        "target": "tg^2(x)",
+        "identity": "(a-c)*tg^2(x) = v*(a-c)",
+        "guaranteed_values": [
+          "v"
+        ]
+      },
+      "constraints": [
+        "a != c"
+      ],
+      "method": "pythagorean_tan_sec"
+    },
+    {
+      "id": "trig_genius_08",
+      "difficulty": "genius",
+      "topic": "harmonic addition (auxiliary angle), single angle",
+      "equation": "a·sin(x) + b·cos(x) = c",
+      "domain": {
+        "unit": "radians",
+        "min": "0",
+        "max": "2π",
+        "include_min": true,
+        "include_max": false
+      },
+      "variables": {
+        "R": {
+          "role": "free",
+          "type": "amplitude",
+          "generation": "positive_integer_in_range_1_to_5"
+        },
+        "phi": {
+          "role": "free",
+          "type": "standard_angle",
+          "generation": "standard_angle_in_radians"
+        },
+        "w": {
+          "role": "free",
+          "type": "standard_sine_value",
+          "generation": "standard_sine_value"
+        },
+        "a": {
+          "role": "derived",
+          "formula": "R*cos(phi)"
+        },
+        "b": {
+          "role": "derived",
+          "formula": "R*sin(phi)"
+        },
+        "c": {
+          "role": "derived",
+          "formula": "R*w"
+        }
+      },
+      "generation": {
+        "order": [
+          "R",
+          "phi",
+          "w",
+          "a",
+          "b",
+          "c"
+        ]
+      },
+      "construction": {
+        "target": "sin(x + phi)",
+        "identity": "R*sin(x + phi) = c",
+        "guaranteed_values": [
+          "w"
+        ]
+      },
+      "constraints": [
+        "R > 0"
+      ],
+      "method": "harmonic_addition_single"
+    },
+    {
+      "id": "trig_genius_09",
+      "difficulty": "genius",
+      "topic": "homogeneous equation reduced to tangent",
+      "equation": "a·sin²(x) + b·sin(x)·cos(x) + c·cos²(x) = 0",
+      "domain": {
+        "unit": "radians",
+        "min": "0",
+        "max": "2π",
+        "include_min": true,
+        "include_max": false
+      },
+      "variables": {
+        "r1": {
+          "role": "free",
+          "type": "standard_tangent_value",
+          "generation": "standard_tangent_value"
+        },
+        "r2": {
+          "role": "free",
+          "type": "standard_tangent_value",
+          "generation": "standard_tangent_value"
+        },
+        "k": {
+          "role": "free",
+          "type": "nonzero_integer",
+          "generation": "nonzero_integer_in_range_-6_to_6"
+        },
+        "a": {
+          "role": "derived",
+          "formula": "k"
+        },
+        "b": {
+          "role": "derived",
+          "formula": "-k*(r1+r2)"
+        },
+        "c": {
+          "role": "derived",
+          "formula": "k*r1*r2"
+        }
+      },
+      "generation": {
+        "order": [
+          "r1",
+          "r2",
+          "k",
+          "a",
+          "b",
+          "c"
+        ]
+      },
+      "construction": {
+        "target": "tg(x)",
+        "identity": "k*(tg(x)-r1)*(tg(x)-r2)",
+        "guaranteed_roots": [
+          "r1",
+          "r2"
+        ]
+      },
+      "constraints": [
+        "k != 0"
+      ],
+      "method": "homogeneous_to_tan"
+    },
+    {
+      "id": "trig_genius_10",
+      "difficulty": "genius",
+      "topic": "harmonic addition, double angle",
+      "equation": "a·cos(2x) + b·sin(2x) = c",
+      "domain": {
+        "unit": "radians",
+        "min": "0",
+        "max": "2π",
+        "include_min": true,
+        "include_max": false
+      },
+      "variables": {
+        "R": {
+          "role": "free",
+          "type": "amplitude",
+          "generation": "positive_integer_in_range_1_to_5"
+        },
+        "phi": {
+          "role": "free",
+          "type": "standard_angle",
+          "generation": "standard_angle_in_radians"
+        },
+        "w": {
+          "role": "free",
+          "type": "standard_sine_value",
+          "generation": "standard_sine_value"
+        },
+        "a": {
+          "role": "derived",
+          "formula": "R*sin(phi)"
+        },
+        "b": {
+          "role": "derived",
+          "formula": "R*cos(phi)"
+        },
+        "c": {
+          "role": "derived",
+          "formula": "R*w"
+        }
+      },
+      "generation": {
+        "order": [
+          "R",
+          "phi",
+          "w",
+          "a",
+          "b",
+          "c"
+        ]
+      },
+      "construction": {
+        "target": "sin(2*x + phi)",
+        "identity": "R*sin(2*x + phi) = c",
+        "guaranteed_values": [
+          "w"
+        ]
+      },
+      "constraints": [
+        "R > 0"
+      ],
+      "method": "harmonic_addition_double"
+    }
+  ]
+}
