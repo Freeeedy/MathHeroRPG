@@ -7,6 +7,7 @@ from sympy.parsing.sympy_parser import parse_expr, standard_transformations, imp
 
 transformations = standard_transformations + (implicit_multiplication_application,)
 
+difficulty = "easy"
 
 with open("templates.json", "r", encoding="utf-8") as f:
     data = json.load(f)
@@ -54,19 +55,21 @@ def substitue_values(equation, values):
 
     return left, right
 
+def generate_equation(difficulty):
+    template = choose_template(difficulty)
+    equation = template["equation"]
 
-template = choose_template("easy")
-equation = template["equation"]
+    values = generate_free_values(template)
+    values = generate_derived_variables(template, values)
 
-values = generate_free_values(template)
-values = generate_derived_variables(template, values)
+    left, right = substitue_values(equation, values)
 
-left, right = substitue_values(equation, values)
+    solutions = generate_solutions(template, values)
 
-solutions = generate_solutions(template, values)
+    print(solutions)
 
+    return left, right, solutions
 #print(template["equation"])
 #print(values)
 #print(template["method"])
 #print(left, "=", right0)0
-print(solutions)
