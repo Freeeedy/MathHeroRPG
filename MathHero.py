@@ -56,6 +56,18 @@ enter_frame_right = pygame.image.load("assets/frames/enter_frame_right.png").con
 
 enter_frame_text = enter_font.render("Enter", 0, (255,255,255))
 
+# Enemy health
+enemy_health_frame = pygame.image.load("assets/frames/enemy_health_frame.png").convert_alpha()
+enemy_health_bar = pygame.image.load("assets/frames/enemy_health_bar.png").convert_alpha()
+
+enemy_health_frame = pygame.transform.scale(enemy_health_frame, (350, 40))
+enemy_health_bar = pygame.transform.scale(enemy_health_bar, (350, 40))
+
+enemy_hp = 100
+max_enemy_hp = 100
+
+damage = 50
+
 running = True
 
 while running:
@@ -65,7 +77,10 @@ while running:
             running = False
 
         if event.type == pygame.TEXTINPUT:
-            answer += event.text
+            if event.text == ",":
+                answer += ", "
+            else: 
+                answer += event.text
 
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_BACKSPACE:
@@ -73,24 +88,25 @@ while running:
 
             if event.key == pygame.K_RETURN:
                 print("Submitted:", answer)
-                if answer == str(solutions):
+                if answer == solution_text:
                     print("Correct answer")
                     left, right, solutions = generate_equation(difficulty)
                     answer = ""
+                    enemy_hp = enemy_hp - damage
 
         if event.type == pygame.MOUSEBUTTONDOWN:
             if event.button == 1 and enter_rect.collidepoint(event.pos):
-                if answer == str(solutions):
+                if answer == solution_text:
                     print("Corret answer")
                     left, right, solutions = generate_equation(difficulty)
                     answer = ""
+                    enemy_hp = enemy_hp - damage
                 else:
                     print("Incorrect answer. Try again")
 
-
     screen.fill(clear_color)
     screen.blit(forest_background, (0, 0))
-
+    solution_text = str(solutions)[1:-1]
 
     # Equation
     equation = pretty_equation(left, right)
@@ -162,15 +178,20 @@ while running:
 
     # Answer
     cursor_trimer += clock.get_time()
+    answer_text = ""
 
     if cursor_trimer >=500:
         cursor_visible = not cursor_visible
         cursor_trimer = 0
 
-    answer_text = answer
+    if answer != "":
+        answer_text = "[" + answer
 
     if cursor_visible:
         answer_text += "|"
+
+    if answer != "":
+        answer_text += "]"
 
     answer_surface = answer_font.render(answer_text, 0, (255,255,255))
 
@@ -180,6 +201,17 @@ while running:
     else:
         screen.blit(answer_surface, (answer_frame_x + answer_side_width + 10, answer_frame_y + 12))
 
+    enemy_hp_percent = enemy_hp / max_enemy_hp
+    enemy_hp_bar_width = int(enemy_health_bar.get_width() * enemy_hp_percent)
+    enemy_hp_bar_cropped = enemy_health_bar.subsurface((0, 0, enemy_hp_bar_width, enemy_health_bar.get_height()))
+
+    # Enemy health
+    screen.blit(enemy_health_frame, (screen_center_x - enemy_health_frame.get_width() // 2, equation_frame_y - enemy_health_frame.get_height() - 12))
+    screen.blit(enemy_hp_bar_cropped, (screen_center_x - enemy_health_bar.get_width() // 2, equation_frame_y - enemy_health_bar.get_height() - 12))
+
+    if enemy_hp <= 0:
+        print("You win. Good job")
+        break
 
     pygame.display.flip()
     clock.tick(fps)
