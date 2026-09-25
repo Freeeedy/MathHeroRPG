@@ -66,7 +66,7 @@ def generate_equation(difficulty):
 
     solutions = generate_solutions(template, values)
 
-    print(solutions)
+    print(str(solutions))
 
     return left, right, solutions
 #print(template["equation"])
